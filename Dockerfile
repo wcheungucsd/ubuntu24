@@ -7,7 +7,7 @@
 #ARG BASE_CONTAINER=ghcr.io/ucsd-ets/datascience-notebook:stable
 
 #FROM $BASE_CONTAINER
-FROM ubuntu:24.04
+FROM ubuntu:latest
 
 #LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 LABEL maintainer="wcheung@ucsd.edu"
@@ -16,8 +16,7 @@ LABEL maintainer="wcheung@ucsd.edu"
 USER root
 
 #RUN apt-get -y install htop
-RUN apt clean
-RUN apt update
+RUN apt clean && apt update
 RUN apt -y install htop
 
 # 3) install packages using notebook user
