@@ -7,7 +7,7 @@
 #ARG BASE_CONTAINER=ghcr.io/ucsd-ets/datascience-notebook:stable
 
 #FROM $BASE_CONTAINER
-FROM ubuntu:latest
+FROM ubuntu:24.04
 
 #LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 LABEL maintainer="wcheung@ucsd.edu"
@@ -28,3 +28,4 @@ RUN apt -y install htop
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
+CMD ["/bin/bash"]
