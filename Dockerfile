@@ -16,8 +16,8 @@ LABEL maintainer="wcheung@ucsd.edu"
 USER root
 
 #RUN apt-get -y install htop
-RUN apt clean && apt update && apt upgrade
-RUN apt -y install htop
+RUN apt-get -y clean && apt-get -y update && apt-get -y upgrade
+RUN apt-get -y install htop
 
 # 3) install packages using notebook user
 #USER jovyan
